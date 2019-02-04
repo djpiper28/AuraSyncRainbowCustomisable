@@ -186,7 +186,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				for (size_t i = 0; i < _ledCount * 3; ++i)
 				{
 					// phanteks rgb strip correction for me :)
-					if (i >= (_ledCount * 3) - 4) {
+					//if (i >= (_ledCount * 3) - 4) {
 						if (i % 3 == 0) {
 							color[i] = (rgb << 16) >> 16;//b
 						}
@@ -196,8 +196,8 @@ int _tmain(int argc, _TCHAR* argv[])
 						if (i % 3 == 2) {
 							color[i] = ((rgb << 8) >> 16);//g
 						}
-					}
-					else {
+					//}
+					//else {
 						if (i % 3 == 0) {
 							color[i] = (rgb >> 16);//r
 						}
@@ -207,7 +207,7 @@ int _tmain(int argc, _TCHAR* argv[])
 						if (i % 3 == 2) {
 							color[i] = (rgb << 16) >> 16;//b
 						}
-					}
+					//}
 				}
 
 				SetMbColor(_mbLightCtrl[0], color, _ledCount * 3);
